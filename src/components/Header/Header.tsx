@@ -28,7 +28,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           src={menu}
         />}
         <Link to={'/'}>
-          <LogoIcon src={'/logos/logo.svg'} />
+          <LogoIcon src={'/logos/sadu-logo.svg'} />
         </Link>
         {!showMobileMenu && (
           <nav>
@@ -158,6 +158,9 @@ const MenuIcon = styled.img`
 
 const LogoIcon = styled.img`
   margin-right: 32px;
+  width: auto;
+  max-width: 130px;
+  height: 90px;
 `;
 
 const RightSide = styled.div`
