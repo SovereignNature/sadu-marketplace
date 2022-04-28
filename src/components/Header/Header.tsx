@@ -39,7 +39,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                Market
+                Exhibition
               </DesktopMenuItem>
             </Link>
             <Link to='myTokens'>
@@ -49,7 +49,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My tokens
+                My Gallery
               </DesktopMenuItem>
             </Link>
             <Link to='trades'>
@@ -69,7 +69,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                FAQ
+                About Sādu
               </DesktopMenuItem>
             </Link>
           </nav>
@@ -88,7 +88,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                Market
+                Exhibition
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -100,7 +100,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My tokens
+                My Gallery
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -124,7 +124,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                FAQ
+                About Sādu
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -157,6 +157,8 @@ const MenuIcon = styled.img`
 `;
 
 const LogoIcon = styled.img`
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-right: 32px;
   width: auto;
   max-width: 130px;
@@ -204,10 +206,20 @@ const TextStyled = styled(Text) <{ $active?: boolean }>`
 
 const DesktopMenuItem = styled(Text) <{ $active?: boolean }>`
   && {
+    font-size: 18px;
+    padding: 12px;
+    font-weight: 200;
     margin-right: 24px;
+    letter-spacing: 1px;
+    margin: 0 12px;
+    border-radius: 8px !important;
+    text-transform: capitalize;
+    transition: .4s;
+    background-color: ${(props) => props.$active ? 'var(--color-primary-900)' : 'none'};
     color: ${(props) => props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-500)'};
     border-bottom: ${(props) => props.$active ? '1px solid var(--color-additional-dark)' : 'none'};
     &:hover {
+      background-color: rgba(255,255,255,.2);
       color: ${(props) => (props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-400)')};
     }
   }
