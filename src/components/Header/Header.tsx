@@ -34,7 +34,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           <nav>
             <Link to='/'>
               <DesktopMenuItem
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Exhibition'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
@@ -42,9 +42,9 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 Exhibition
               </DesktopMenuItem>
             </Link>
-            <Link to='myTokens'>
+            <Link to='myGallery'>
               <DesktopMenuItem
-                $active={activeItem === 'My tokens'}
+                $active={activeItem === 'My Gallery'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
@@ -62,9 +62,9 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 Trades
               </DesktopMenuItem>
             </Link>
-            <Link to='faq'>
+            <Link to='aboutSadu'>
               <DesktopMenuItem
-                $active={activeItem === 'FAQ'}
+                $active={activeItem === 'About Sādu'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
@@ -83,7 +83,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           <LinkWrapper onClick={mobileMenuToggler}>
             <Link to='/'>
               <TextStyled
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Exhibition'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
@@ -93,9 +93,9 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
             </Link>
           </LinkWrapper>
           <LinkWrapper onClick={mobileMenuToggler}>
-            <Link to='myTokens'>
+            <Link to='myGallery'>
               <TextStyled
-                $active={activeItem === 'My tokens'}
+                $active={activeItem === 'My Gallery'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
@@ -117,9 +117,9 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
             </Link>
           </LinkWrapper>
           <LinkWrapper onClick={mobileMenuToggler}>
-            <Link to='faq'>
+            <Link to='aboutSadu'>
               <TextStyled
-                $active={activeItem === 'FAQ'}
+                $active={activeItem === 'About Sādu'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
