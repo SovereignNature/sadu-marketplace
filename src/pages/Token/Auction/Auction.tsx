@@ -151,6 +151,7 @@ const AuctionWrapper = styled.div`
 
 const TimerWrapper = styled.div`
   margin-top: 24px;
+  color: #fff;
 `;
 
 const Row = styled.div`

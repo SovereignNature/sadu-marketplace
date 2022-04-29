@@ -114,7 +114,6 @@ export const CommonTokenDetail: FC<IProps> = ({
         </Row>
         <Divider />
         {children}
-        <AttributesBlock attributes={attributes} />
         <Divider />
         <CollectionsCard
           avatarSrc={collectionCoverImage || ''}
@@ -130,6 +129,10 @@ export const CommonTokenDetail: FC<IProps> = ({
 const CommonTokenDetailStyled = styled.div`
   display: flex;
   width: 100%;
+  .unique-font-heading {
+    color: #fff;
+
+  }
 
   @media (max-width: 568px) {
     flex-direction: column;
