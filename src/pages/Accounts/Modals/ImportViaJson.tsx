@@ -3,7 +3,7 @@ import { Button, Heading, Modal, Text } from '@unique-nft/ui-kit';
 import styled from 'styled-components/macro';
 
 import { TAccountModalProps } from './types';
-import { AdditionalWarning100 } from '../../../styles/colors';
+import { Primary700 } from '../../../styles/colors';
 import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 import { Upload } from '../../../components/Upload/Upload';
 import { convertToU8a, keyringFromFile } from '../../../utils/jsonUtils';
@@ -93,7 +93,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin: calc(var(--gap) * 1.5) 0;
   border-radius: 4px;
-  background-color: ${AdditionalWarning100};
+  background-color: ${Primary700};
   width: 100%;
 `;
 

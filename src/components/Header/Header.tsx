@@ -153,7 +153,7 @@ const LeftSideColumn = styled.div`
 const MenuIcon = styled.img`
   width: 32px;
   height: 32px;
-  margin-right: 8px;
+  margin-right: 24px;
 `;
 
 const LogoIcon = styled.img`
@@ -183,7 +183,7 @@ const MobileMenu = styled.div`
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: var(--color-additional-light);
+  background-color: rgb(0 0 0 / 80%);
   box-shadow: inset 0 2px 8px rgb(0 0 0 / 6%);
   display: flex;
   flex-direction: column;
