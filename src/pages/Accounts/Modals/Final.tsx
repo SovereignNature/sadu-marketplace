@@ -5,7 +5,7 @@ import styled from 'styled-components/macro';
 
 import DefaultAvatar from '../../../static/icons/default-avatar.svg';
 import { defaultPairType, derivePath } from './CreateAccount';
-import { AdditionalWarning100, Grey300 } from '../../../styles/colors';
+import { Primary700, Grey300 } from '../../../styles/colors';
 import { Tooltip } from '../../../components/Tooltip/Tooltip';
 import Question from '../../../static/icons/question.svg';
 
@@ -96,7 +96,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin: var(--gap) 0;
   border-radius: 4px;
-  background-color: ${AdditionalWarning100};
+  background-color: ${Primary700};
   width: 100%;
 `;
 
@@ -118,6 +118,7 @@ const CredentialsWrapper = styled.div`
 `;
 
 const ValueTextStyled = styled.div`
+  color: var(--color-additional-light);
   border: 1px solid ${Grey300};
   padding: 11px 12px;
   border-radius: 4px;
