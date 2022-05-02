@@ -43,6 +43,7 @@ export const SaduStyle = createGlobalStyle`
     background: var(--color-primary-700);
   }
   /* reset default browser css */
+  
   .unique-text {
     color: var(--color-additional-light) !important;
   }
