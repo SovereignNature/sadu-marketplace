@@ -77,7 +77,6 @@ class UniqueNFTController implements INFTController<NFTCollection, NFTToken> {
       };
     } catch (e) {
       console.log('getDetailedTokenInfo error', e);
-
       return null;
     }
   }
