@@ -51,6 +51,7 @@ export interface NFTToken {
   variableData?: string
   attributes: AttributesDecoded
   imageUrl: string
+  videoUrlTemplate?: string,
   collectionId?: number
   collectionName?: string
   prefix?: string

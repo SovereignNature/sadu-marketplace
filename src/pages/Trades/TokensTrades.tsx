@@ -1,5 +1,5 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
-import { Button, InputText, Pagination, Text } from '@unique-nft/ui-kit';
+import { FC, useCallback, useEffect, useState } from 'react';
+import { Pagination, Text } from '@unique-nft/ui-kit';
 import { SortQuery } from '@unique-nft/ui-kit/dist/cjs/types';
 
 import { useTrades } from '../../api/restApi/trades/trades';
@@ -21,7 +21,6 @@ export const TokensTradesPage: FC<TokensTradesPage> = ({ currentTab }) => {
   const { selectedAccount } = useAccounts();
   const [page, setPage] = useState<number>(0);
   const [sortString, setSortString] = useState<string>();
-  const [searchValue, setSearchValue] = useState<string | number>();
 
   const { trades, tradesCount, fetch, isFetching } = useTrades();
   const { tradesWithTokens, isFetchingTokens } = useGetTokensByTrades(trades);

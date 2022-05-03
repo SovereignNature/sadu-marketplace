@@ -45,6 +45,7 @@ class UniqueNFTController implements INFTController<NFTCollection, NFTToken> {
       const crossAccount = normalizeAccountId(tokenData?.owner as { Substrate: string }) as { Substrate: string, Ethereum: string };
 
       let imageUrl = '';
+      let videoUrlTemplate = '';
 
       const onChainSchema = getOnChainSchema(collectionInfo);
 
@@ -52,15 +53,25 @@ class UniqueNFTController implements INFTController<NFTCollection, NFTToken> {
         // imageUrl = await getTokenImage(collectionInfo, tokenId);
         // TODO: Temporary solution to IPFS outage (use constant url base instead of collectionSchema)
         const attributes = {
+          ...decodeStruct({ attr: onChainSchema.offChainSchema, data: onChainSchema.offChainSchema }),
           ...decodeStruct({ attr: onChainSchema.attributesConst, data: constData }),
           ...decodeStruct({ attr: onChainSchema.attributesVar, data: variableData })
         };
         const ipfsJson = JSON.parse(attributes.ipfsJson as string) as { ipfs: string };
+
         imageUrl = `https://ipfs.unique.network/ipfs/${ipfsJson.ipfs}`;
+        if (onChainSchema.offChainSchema) {
+          const videoURL = JSON.parse(onChainSchema.offChainSchema).videoURLTemplate.replace('{id}', tokenId);
+
+          videoUrlTemplate = videoURL;
+        } else {
+          videoUrlTemplate = '';
+        }
       }
 
       return {
         attributes: {
+          ...decodeStruct({ attr: onChainSchema.offChainSchema, data: onChainSchema.offChainSchema }),
           ...decodeStruct({ attr: onChainSchema.attributesConst, data: constData }),
           ...decodeStruct({ attr: onChainSchema.attributesVar, data: variableData })
         },
@@ -68,6 +79,7 @@ class UniqueNFTController implements INFTController<NFTCollection, NFTToken> {
         id: tokenId,
         collectionId,
         imageUrl,
+        videoUrlTemplate,
         owner: crossAccount,
         variableData,
         collectionName: collectionName16Decoder(collectionInfo.name),

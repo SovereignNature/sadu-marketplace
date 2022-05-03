@@ -42,17 +42,20 @@ export const decodeStruct = ({ attr, data }: { attr?: any; data?: string }): Att
 };
 
 export const getOnChainSchema = (collection: NFTCollection): {
+  offChainSchema: any
   attributesConst: string
   attributesVar: string
 } => {
   if (collection) {
     return {
+      offChainSchema: hex2a(collection.offchainSchema),
       attributesConst: hex2a(collection.constOnChainSchema),
       attributesVar: hex2a(collection.variableOnChainSchema)
     };
   }
 
   return {
+    offChainSchema: { additionalType: '', videoURLTemplate: '' },
     attributesConst: '',
     attributesVar: ''
   };

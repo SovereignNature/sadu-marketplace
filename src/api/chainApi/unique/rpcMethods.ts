@@ -70,7 +70,8 @@ const rpcMethods = {
   lastTokenId: fun('Get last token id', [collectionParam], TOKEN_ID_TYPE),
   tokenExists: fun('Check if token exists', [collectionParam, tokenParam], 'bool'),
   tokenOwner: fun('Get token owner', [collectionParam, tokenParam], CROSS_ACCOUNT_ID_TYPE),
-  variableMetadata: fun('Get token variable metadata', [collectionParam, tokenParam], 'Vec<u8>')
+  variableMetadata: fun('Get token variable metadata', [collectionParam, tokenParam], 'Vec<u8>'),
+  offChainSchema: fun('Get offChainSchema data', [collectionParam, tokenParam], 'Vec<u8>')
 };
 
 export default rpcMethods;

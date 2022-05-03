@@ -37,6 +37,7 @@ export const CommonTokenDetail: FC<IProps> = ({
     collectionName,
     description,
     attributes,
+    videoUrlTemplate,
     imageUrl,
     id: tokenId,
     prefix
@@ -86,7 +87,14 @@ export const CommonTokenDetail: FC<IProps> = ({
   return (
     <CommonTokenDetailStyled>
       <PictureWrapper>
-        <Picture alt={tokenId.toString()} src={imageUrl} />
+        {videoUrlTemplate && <video
+          autoPlay
+          muted
+          loop
+          width='400'>
+          <source src={videoUrlTemplate} type='video/mp4'></source>
+        </video>}
+        {!videoUrlTemplate && <Picture alt={tokenId.toString()} src={imageUrl} />}
       </PictureWrapper>
       <Description>
         <Heading size={'1'}>{`${prefix || ''} #${tokenId}`}</Heading>
