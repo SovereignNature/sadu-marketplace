@@ -85,6 +85,26 @@ const CollectionsFilter: FC<CollectionsFilterProps> = ({ value, onChange, onTrai
           ))}
       </CollectionFilterWrapper>
     </Accordion>
+    {/* TODO: unsupported on back-end */}
+    {onTraitsChange && selectedCollections.length === 1 && <AttributesFilterWrapper>
+      {/* TODO: make mapping attributes of the selected collection */}
+      <Accordion title={'Traits'} isOpen={true}>
+        <CollectionFilterWrapper>
+          {isTraitsFetching && <Loading />}
+          {traits.map((trait) => (
+            <AttributeWrapper key={`attribute-${trait.trait}`}>
+              <Checkbox
+                checked={selectedTraits.indexOf(trait.trait) !== -1}
+                label={trait.trait}
+                size={'m'}
+                onChange={onAttributeSelect(trait)}
+              />
+              <span>{trait.count}</span>
+            </AttributeWrapper>
+          ))}
+        </CollectionFilterWrapper>
+      </Accordion>
+    </AttributesFilterWrapper>}
   </>);
 };
 

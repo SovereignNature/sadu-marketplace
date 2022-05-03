@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styled from 'styled-components/macro';
 import { Text } from '@unique-nft/ui-kit';
-import { Grey100 } from '../../../styles/colors';
+import { Grey100, Primary700 } from '../../../styles/colors';
 
 export interface ITraitProps {
   trait: string;
@@ -24,7 +24,7 @@ const TraitStyled = styled.div`
   flex-wrap: nowrap;
   padding: 1px 8px;
   border-radius: 4px;
-  background-color: ${Grey100};
+  background-color: ${Primary700};
 
   &:not(:last-of-type) {
     margin-right: 8px;

@@ -1,15 +1,14 @@
-import { Heading, Icon, Text } from '@unique-nft/ui-kit';
+import { Heading, Text } from '@unique-nft/ui-kit';
 import React, { FC, ReactChild, useCallback, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components/macro';
 
 import { Picture } from '../../../components';
-import share from '../../../static/icons/share.svg';
 import { CollectionsCard } from './CollectionsCard';
 import { AttributesBlock } from './AttributesBlock';
 import { NFTToken } from '../../../api/chainApi/unique/types';
 import useDeviceSize, { DeviceSize } from '../../../hooks/useDeviceSize';
 import { shortcutText } from '../../../utils/textUtils';
-import { Grey300, Grey500, Primary600 } from '../../../styles/colors';
+import { Grey300, Primary600 } from '../../../styles/colors';
 import { Avatar } from '../../../components/Avatar/Avatar';
 import DefaultAvatar from '../../../static/icons/default-avatar.svg';
 import config from '../../../config';
@@ -98,14 +97,6 @@ export const CommonTokenDetail: FC<IProps> = ({
       </PictureWrapper>
       <Description>
         <Heading size={'1'}>{`${prefix || ''} #${tokenId}`}</Heading>
-        <ShareLink onClick={onShareClick}>
-          <Text color='grey-500' size='m'>
-            Share Link
-          </Text>
-          <IconWrapper>
-            <Icon file={share} size={24} />
-          </IconWrapper>
-        </ShareLink>
         <Row>
           {isOwner && <Text color='grey-500' size='m'>You own it</Text>}
           {!isOwner && <>
@@ -122,6 +113,7 @@ export const CommonTokenDetail: FC<IProps> = ({
         </Row>
         <Divider />
         {children}
+        <AttributesBlock attributes={attributes} />
         <Divider />
         <CollectionsCard
           avatarSrc={collectionCoverImage || ''}
@@ -145,15 +137,6 @@ const CommonTokenDetailStyled = styled.div`
   @media (max-width: 568px) {
     flex-direction: column;
     row-gap: var(--gap);
-  }
-`;
-
-const IconWrapper = styled.div`
-  margin-left: 4px;
-  margin-right: 16px;
-
-  svg {
-    fill: ${Grey500};
   }
 `;
 
