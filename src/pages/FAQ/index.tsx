@@ -138,6 +138,7 @@ const MainWrapper = styled.div`
   }
   
   p, ol li {
+    margin-bottom: 1rem;
     color: var(--color-additional-light);
     font-size: 16px;
     line-height: 2;
