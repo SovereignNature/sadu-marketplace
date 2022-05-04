@@ -77,7 +77,7 @@ const LayoutStyled = styled.div`
       text-align: left;
       text-transform: uppercase;
       font-weight: 500;
-      margin: 32px 0;
+      margin: 0 0 32px;
       color: var( --color-additional-light);
       font-family: var(--font-heading);
     }

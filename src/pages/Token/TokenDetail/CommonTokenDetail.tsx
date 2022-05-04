@@ -86,13 +86,15 @@ export const CommonTokenDetail: FC<IProps> = ({
   return (
     <CommonTokenDetailStyled>
       <PictureWrapper>
-        {videoUrlTemplate && <video
-          autoPlay
-          muted
-          loop
-          width='400'>
-          <source src={videoUrlTemplate} type='video/mp4'></source>
-        </video>}
+        {videoUrlTemplate &&
+        <div className='picture'>
+          <video
+            autoPlay
+            muted
+            loop>
+            <source src={videoUrlTemplate} type='video/mp4'></source>
+          </video>
+        </div>}
         {!videoUrlTemplate && <Picture alt={tokenId.toString()} src={imageUrl} />}
       </PictureWrapper>
       <Description>
@@ -166,7 +168,8 @@ const PictureWrapper = styled.div`
     border-radius: 8px;
     
 
-    img {
+    img,
+    video {
       max-width: 100%;
       max-height: 100%;
     }
