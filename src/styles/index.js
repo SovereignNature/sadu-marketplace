@@ -43,6 +43,10 @@ export const SaduStyle = createGlobalStyle`
     background: var(--color-primary-700);
   }
   /* reset default browser css */
+
+  .connect__btn {
+    height:  inherit !important;
+  }
   
   .unique-text {
     color: var(--color-additional-light) !important;

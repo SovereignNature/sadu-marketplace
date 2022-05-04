@@ -41,7 +41,7 @@ export const WalletManager: FC = () => {
 
   if (!isLoading && accounts.length === 0) {
  return (
-   <Button title={'Connect or create account'} onClick={onCreateAccountClick} />
+   <Button className='connect__btn' title={'Connect or create account'} onClick={onCreateAccountClick} />
   );
 }
 
