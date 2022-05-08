@@ -298,4 +298,10 @@ const TokensListWrapper = styled.div`
 const InputTextStyled = styled(InputText)`
   width: 100%;
   max-width: 610px;
+  
+  .input-wrapper {
+    input {
+      padding: 12px !important;
+    }
+  }
 `;

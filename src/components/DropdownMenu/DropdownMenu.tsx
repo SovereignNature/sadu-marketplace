@@ -3,7 +3,7 @@ import { DropdownMenuItemProps, DropdownMenuProps } from './types';
 import styled from 'styled-components/macro';
 import { Button, Icon } from '@unique-nft/ui-kit';
 import CaretDown from '../../static/icons/caret-down.svg';
-import { AdditionalLight, Primary800 } from '../../styles/colors';
+import { AdditionalDark, AdditionalLight, Primary200, Primary800 } from '../../styles/colors';
 
 export const DropdownMenu: FC<DropdownMenuProps> = ({ children, ...props }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -83,7 +83,7 @@ const DropdownMenuItemWrapper = styled.div`
   padding: var(--gap);
   cursor: pointer;
   &:hover {
-    background: ${Primary800};
-    color: ${AdditionalLight};
+    background: ${Primary200};
+    color: ${AdditionalDark};
   }
 `;

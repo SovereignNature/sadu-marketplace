@@ -4,7 +4,7 @@ import { addressFromSeed } from '../../../utils/seedUtils';
 import { Avatar, Button, Checkbox, Text } from '@unique-nft/ui-kit';
 import DefaultAvatar from '../../../static/icons/default-avatar.svg';
 import { defaultPairType, derivePath } from './CreateAccount';
-import { Primary700, Grey300 } from '../../../styles/colors';
+import { Primary700, Grey300, Primary200 } from '../../../styles/colors';
 import styled from 'styled-components/macro';
 
 export const AskExistsSeedPhraseModal: FC<TCreateAccountBodyModalProps> = ({ onFinish }) => {
@@ -96,7 +96,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin: calc(var(--gap) * 1.5) 0;
   border-radius: 4px;
-  background-color: ${Primary700};
+  background-color: ${Primary200};
   width: 100%;
 `;
 

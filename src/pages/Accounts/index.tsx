@@ -23,6 +23,7 @@ import { toChainFormatAddress } from '../../api/chainApi/utils/addressUtils';
 import { useApi } from '../../hooks/useApi';
 import AccountCard from '../../components/Account/Account';
 import useDeviceSize, { DeviceSize } from '../../hooks/useDeviceSize';
+import { Primary200 } from '../../styles/colors';
 
 const tokenSymbol = 'KSM';
 
@@ -330,6 +331,7 @@ const ActionsWrapper = styled.div`
 `;
 
 const TextStyled = styled(Text)`
+  background: ${Primary200};
   && {
     color: var(--color-primary-200);
   }

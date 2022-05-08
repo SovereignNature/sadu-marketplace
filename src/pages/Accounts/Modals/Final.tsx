@@ -5,7 +5,7 @@ import styled from 'styled-components/macro';
 
 import DefaultAvatar from '../../../static/icons/default-avatar.svg';
 import { defaultPairType, derivePath } from './CreateAccount';
-import { Primary700, Grey300 } from '../../../styles/colors';
+import { Primary700, Grey300, Primary200 } from '../../../styles/colors';
 import { Tooltip } from '../../../components/Tooltip/Tooltip';
 import Question from '../../../static/icons/question.svg';
 
@@ -96,7 +96,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin: var(--gap) 0;
   border-radius: 4px;
-  background-color: ${Primary700};
+  background-color: ${Primary200};
   width: 100%;
 `;
 

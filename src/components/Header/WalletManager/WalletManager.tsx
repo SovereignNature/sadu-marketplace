@@ -144,7 +144,7 @@ const SettingsButtonWrapper = styled.div <{ $gearActive?: boolean }>`
   span {
     display: flex;
     align-items: center;
-    color: ${(props) => (props.$gearActive ? 'var(--color-primary-500)' : 'var(--color-grey-500)')};
+    color: ${(props) => (props.$gearActive ? 'var(--color-primary-200)' : 'var(--color-grey-500)')};
   }
 `;
 

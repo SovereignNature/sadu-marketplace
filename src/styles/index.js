@@ -109,11 +109,17 @@ export const SaduStyle = createGlobalStyle`
       color: var(--color-additional-light);
 
       svg {
-        fill: var(--color-secondary-100);
+        fill: var(--color-secondary-200);
       }
 
       .select-dropdown {
         background-color: var(--card-background);
+        .dropdown-option {
+          &: hover,
+          &.selected {
+            color: var(--color-additional-dark);
+          }
+        }
       }
     }
   }
@@ -129,7 +135,7 @@ export const SaduStyle = createGlobalStyle`
       }
       input {
         color: var(--color-additional-light);
-        background: rgb(35, 31, 32);
+        background: #322222;
         border-radius: 4px;
         &:focus{
           border: 1px solid var(--color-additional-light);
@@ -138,14 +144,24 @@ export const SaduStyle = createGlobalStyle`
     }
   }
 
+  .unique-button {
+    &.primary {
+      background: var(--color-primary-300);
+      border-color: var(--color-primary-300);
+      color: var(--color-additional-dark);
+    }
+  }
+
   .unique-checkbox-wrapper {
     .checkmark {
-      background: rgb(35, 31, 32);
-      border: 1px solid rgb(90, 125, 124);
+      background: #322222;
+      border: 1px solid var(--color-primary-200);
       &:hover {
         border: 1px solid var(--color-additional-light);
       }
       &.checked {
+        background: var(--color-primary-200);
+        border: 1px solid var(--color-primary-200);
         border-radius: 4px;
         width: 20px;
         height: 20px;

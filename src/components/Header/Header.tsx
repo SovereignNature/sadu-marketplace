@@ -159,6 +159,26 @@ const HeaderStyled = styled.div`
 const LeftSideColumn = styled.div`
   display: flex;
   align-items: center;
+  & > a {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      &:after {
+        content: "beta";
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 0px 5px;
+        position: relative;
+        bottom: 0px;
+        font-size: 12px;
+        bottom: -30px;
+        left: 6px;
+      }
+    }
+  }
+  
 `;
 
 const MenuIcon = styled.img`
@@ -173,7 +193,7 @@ const LogoIcon = styled.img`
   margin-right: 32px;
   width: auto;
   max-width: 130px;
-  height: 90px;
+  height: 90px;  
 `;
 
 const RightSide = styled.div`
