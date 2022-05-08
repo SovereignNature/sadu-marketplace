@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { Primary200 } from './colors';
+import { AdditionalDark, Primary200 } from './colors';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -64,6 +64,16 @@ export const SaduStyle = createGlobalStyle`
           color: ${Primary200};
         }
       }
+      .unique-tabs-labels {
+        .tab-label {
+          border: 1px solid ${Primary200};
+          color: ${Primary200};
+          &.active {
+            background-color: ${Primary200};
+            color: ${AdditionalDark};
+          }
+        }
+      }
     }
   }
   
@@ -74,8 +84,13 @@ export const SaduStyle = createGlobalStyle`
   .unique-table {
     .unique-table-data {
       .unique-table-data-row {
-        .unique-link.secondary {
-          color: var(--color-secondary-100);
+        .unique-link {
+          &.primary {
+            color: var(--color-secondary-200);
+          }
+          &.secondary {
+            color: var(--color-secondary-100);
+          }
         }
       }
     }
@@ -84,6 +99,10 @@ export const SaduStyle = createGlobalStyle`
     .pages-wrapper {
       .page-item {
         color: var(--color-secondary-200);
+        &.active {
+          background-color: var(--color-secondary-200);
+
+        }
         svg.icon {
           fill: var(--color-secondary-200);
         }
