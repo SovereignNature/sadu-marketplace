@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   ::selection {
     color: #fff;
-    background: #439595;
+    background: #aae6b9;
   }
 /* reset default browser css */
 
