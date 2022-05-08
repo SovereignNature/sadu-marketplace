@@ -5,35 +5,35 @@ import styled from 'styled-components/macro';
 import { Header } from '.';
 import { useFooter } from '../hooks/useFooter';
 
-export type TMenuItems = 'Market' | 'My tokens' | 'Trades' | 'FAQ';
+export type TMenuItems = 'Bio-Compendium' | 'My tokens' | 'Trades' | 'FAQ';
 
 export const PageLayout: FC = () => {
   const { pathname } = useLocation();
   const footer = useFooter();
 
   const layoutProps = useMemo(() => {
-    if (pathname === '/exhibition') return { heading: 'Exhibition' };
+    if (pathname === '/bio-compendium') return { heading: 'Bio-Compendium' };
 
-    if (pathname === '/myGallery') {
-      return { heading: 'My Gallery' };
+    if (pathname === '/myTokens') {
+      return { heading: 'My Tokens' };
     }
 
     if (pathname === '/trades') {
       return { heading: 'Trades' };
     }
 
-    if (pathname === '/aboutSadu') {
-      return { heading: 'About Sadu' };
+    if (pathname === '/faq') {
+      return { heading: 'FAQ' };
     }
 
     if (pathname === '/accounts') {
       return { heading: 'My Wallets' };
     }
 
-    if (pathname === '/exhibition/token') {
+    if (pathname === '/bio-compendium/token') {
       return {
         breadcrumbs: {
-          options: [{ link: '/exhibition', title: 'Exhibition' }, { title: 'Token' }]
+          options: [{ link: '/bio-compendium', title: 'Bio-Compendium' }, { title: 'Token' }]
         }
       };
     }
@@ -46,7 +46,7 @@ export const PageLayout: FC = () => {
         footer={<div dangerouslySetInnerHTML={{ __html: footer }} />}
         header={
           <Header
-            activeItem={(layoutProps?.heading as TMenuItems) || 'Market'}
+            activeItem={(layoutProps?.heading as TMenuItems) || 'Bio-Compendium'}
           />
         }
       >

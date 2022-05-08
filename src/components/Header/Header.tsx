@@ -34,12 +34,12 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           <nav>
             <Link to='/'>
               <DesktopMenuItem
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Bio-Compendium'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
               >
-                Exhibition
+                Bio-Compendium
               </DesktopMenuItem>
             </Link>
             <Link to='myTokens'>
@@ -49,7 +49,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My Gallery
+                My Tokens
               </DesktopMenuItem>
             </Link>
             <Link to='trades'>
@@ -69,7 +69,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                About Sādu
+                FAQ
               </DesktopMenuItem>
             </Link>
           </nav>
@@ -83,12 +83,12 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           <LinkWrapper onClick={mobileMenuToggler}>
             <Link to='/'>
               <TextStyled
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Bio-Compendium'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
               >
-                Exhibition
+                Bio-Compendium
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -100,7 +100,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My Gallery
+                My Tokens
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -124,7 +124,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                About Sādu
+                FAQ
               </TextStyled>
             </Link>
           </LinkWrapper>
