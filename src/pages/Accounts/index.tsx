@@ -331,7 +331,7 @@ const ActionsWrapper = styled.div`
 
 const TextStyled = styled(Text)`
   && {
-    color: var(--color-primary-500);
+    color: var(--color-primary-200);
   }
 `;
 
@@ -339,7 +339,7 @@ const IconWrapper = styled.div`
   && {
     width: 16px;
     height: 16px;
-    color: var(--color-primary-500);
+    color: var(--color-primary-200);
     padding: 0;
 
     path {

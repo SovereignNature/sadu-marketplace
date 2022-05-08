@@ -84,7 +84,7 @@ const ShortTimer = styled.div`
   font-size: 16px;
   line-height: 24px;
   font-weight:400px;
-  font-family: var(--font-inter);
+  font-family: var(--font-roboto);
   color: var(--color-secondary-100);
   margin-bottom: 16px;
 `;
@@ -109,7 +109,7 @@ const Description = styled.div`
   font-size: 16px;
   line-height: 24px;
   font-weight:400px;
-  font-family: var(--font-inter);
+  font-family: var(--font-roboto);
   color: var(--color-secondary-100);
 `;
 

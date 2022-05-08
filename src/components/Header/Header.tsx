@@ -219,15 +219,15 @@ const DesktopMenuItem = styled(Text) <{ $active?: boolean }>`
   && {
     font-size: 18px;
     padding: 12px;
-    font-weight: 200;
+    
     margin-right: 24px;
     letter-spacing: 1px;
     margin: 0 12px;
     border-radius: 8px !important;
     text-transform: capitalize;
     transition: .4s;
-    background-color: ${(props) => props.$active ? 'var(--color-primary-900)' : 'none'};
-    color: ${(props) => props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-500)'};
+    background-color: ${(props) => props.$active ? 'var(--color-primary-200)' : 'none'};
+    color: ${(props) => props.$active ? 'var(--color-additional-dark) !important' : 'var(--color-primary-200) !important'};
     border-bottom: ${(props) => props.$active ? '1px solid var(--color-additional-dark)' : 'none'};
     &:hover {
       background-color: rgba(255,255,255,.2);

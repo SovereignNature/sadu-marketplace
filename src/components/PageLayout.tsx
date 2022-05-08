@@ -4,6 +4,7 @@ import { Layout } from '@unique-nft/ui-kit';
 import styled from 'styled-components/macro';
 import { Header } from '.';
 import { useFooter } from '../hooks/useFooter';
+import { Primary200 } from '../styles/colors';
 
 export type TMenuItems = 'Bio-Compendium' | 'My tokens' | 'Trades' | 'FAQ';
 
@@ -87,6 +88,9 @@ const LayoutStyled = styled.div`
 
       .footer__text {
         color: var(--color-additional-light);
+        a {
+          color: ${Primary200};
+        }
       }
 
       .footer__text__dafc {

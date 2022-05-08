@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { Primary200 } from './colors';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -24,6 +25,9 @@ a{
 `;
 
 export const SaduStyle = createGlobalStyle`
+  * {
+    font-family: var(--font-roboto);
+  }
   ::selection {
     color: var(--color-additional-light);
     background: var(--color-primary-700);
@@ -50,8 +54,21 @@ export const SaduStyle = createGlobalStyle`
   .connect__btn {
     height:  inherit !important;
   }
+
+  .unique-layout {
+    &__content {
+      .unique-font-heading,
+      p,ol,li {
+        color: var(--color-additional-light);
+        a {
+          color: ${Primary200};
+        }
+      }
+    }
+  }
   
   .unique-text {
+    font-family: var(--font-roboto) !important;
     color: var(--color-additional-light) !important;
   }
   .unique-table {

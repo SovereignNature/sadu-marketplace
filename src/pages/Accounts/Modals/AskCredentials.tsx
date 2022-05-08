@@ -85,6 +85,7 @@ const CredentialsWrapper = styled.div`
   row-gap: calc(var(--gap) / 2);
   margin-bottom: calc(var(--gap) * 1.5);
   .unique-text.size-m {
+    font-family: var(--font-roboto);
     margin-top: calc(var(--gap) * 2);
   }
   .unique-input-text {

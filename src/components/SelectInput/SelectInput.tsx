@@ -1,6 +1,6 @@
 import React, { ChangeEvent, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components/macro';
-import { AdditionalLight, Grey300, Grey500, Primary700, Primary500 } from '../../styles/colors';
+import { AdditionalLight, Grey300, Grey500, Primary700, Primary500, Primary200 } from '../../styles/colors';
 
 interface SelectInputOption {
   key: string
@@ -138,7 +138,7 @@ const OptionWrapper = styled.div`
   cursor: pointer;
   &:hover {
     background: ${Primary700};
-    color: ${Primary500};
+    color: ${Primary200};
   }
 `;
 
