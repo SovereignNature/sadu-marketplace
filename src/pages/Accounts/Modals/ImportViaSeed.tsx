@@ -49,7 +49,7 @@ export const ImportViaSeedAccountModal: FC<TAccountModalProps> = ({ isVisible, o
 
   return (<Modal isVisible={isVisible} isClosable={true} onClose={onClose}>
     <Content>
-      <Heading size='2'>{`Restore an account an account from seed ${stage + 1}/3`}</Heading>
+      <Heading size='2'>{`Restore an account from seed ${stage + 1}/3`}</Heading>
     </Content>
     <ModalBodyComponent
       accountProperties={accountProperties}
