@@ -5,7 +5,7 @@ import styled from 'styled-components/macro';
 import DefaultMarketStages from './StagesModal';
 import { TAuctionProps, TFixPriceProps } from './types';
 import { useAuctionSellStages, useSellFixStages } from '../../../hooks/marketplaceStages';
-import { AdditionalWarning100 } from '../../../styles/colors';
+import { Primary200 } from '../../../styles/colors';
 import { TTokenPageModalBodyProps } from './TokenPageModal';
 import { useAccounts } from '../../../hooks/useAccounts';
 import { NumberInput } from '../../../components/NumberInput/NumberInput';
@@ -292,7 +292,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin-bottom: 24px;
   border-radius: 4px;
-  background-color: ${AdditionalWarning100};
+  background-color: ${Primary200};
   width: 100%;
 `;
 
@@ -343,5 +343,8 @@ const SellModalStyled = styled.div`
 
   .unique-tabs-labels {
     margin-top: 16px;
+    .tab-label.disabled {
+      background: transparent;
+    }
   }
 `;
