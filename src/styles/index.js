@@ -57,6 +57,13 @@ export const SaduStyle = createGlobalStyle`
 
   .unique-layout {
     &__content {
+      .main-subtitle {
+        margin-bottom: 0;
+      }
+      .main-description {
+        display: block;
+        max-width: 90%;
+      }
       .unique-font-heading,
       p,ol,li {
         color: var(--color-additional-light);

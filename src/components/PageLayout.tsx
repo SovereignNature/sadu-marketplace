@@ -1,6 +1,6 @@
 import { FC, useMemo } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { Layout } from '@unique-nft/ui-kit';
+import { Heading, Layout, Text } from '@unique-nft/ui-kit';
 import styled from 'styled-components/macro';
 import { Header } from '.';
 import { useFooter } from '../hooks/useFooter';
@@ -16,7 +16,9 @@ export const PageLayout: FC = () => {
     if (pathname === '/bio-compendium') return { heading: 'Bio-Compendium' };
 
     if (pathname === '/myTokens') {
-      return { heading: 'My Tokens' };
+      return { heading: 'My Tokens',
+      text: 'Han Solo'
+     };
     }
 
     if (pathname === '/trades') {
@@ -51,6 +53,8 @@ export const PageLayout: FC = () => {
           />
         }
       >
+        {layoutProps?.heading === 'Bio-Compendium' && <Heading className='main-subtitle' size='3'>{'An NFT Gallery Planting Value In Nature'}</Heading>}
+        {layoutProps?.heading && <Text className='main-description'>Sales of NFTs found in these collections directly benefit the artists and developers behind them along with designated high-impact ecological organisations and a central treasury for nature’s value. Learn more about the people and companies behind these initiatives in the description field for each item. Explore and entangle with the more-than-human world!</Text>}
         <Outlet />
       </Layout>
     </LayoutStyled>
@@ -78,7 +82,9 @@ const LayoutStyled = styled.div`
       text-align: left;
       text-transform: uppercase;
       font-weight: 500;
-      margin: 32px 0;
+      margin: 0;
+      margin-top: 32px;
+      margin-bottom: 16px;
       color: var( --color-additional-light);
       font-family: var(--font-heading);
     }

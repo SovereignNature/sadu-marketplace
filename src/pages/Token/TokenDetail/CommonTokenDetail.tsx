@@ -114,6 +114,9 @@ export const CommonTokenDetail: FC<IProps> = ({
         </Row>
         <Divider />
         {children}
+        <Row>
+          <p><b>Sales of these NFTs benefit: 30% to designated ecological nonprofit De Ceuvel (sponsor of SNI’s 2022 Experimental Zone), 50% to the poet, 20% to nature treasury.</b></p>
+        </Row>
         <Divider />
         <CollectionsCard
           avatarSrc={collectionCoverImage || ''}
