@@ -9,10 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     /* colors */
     --grey-300: #D2D3D6;
   }
-  ::selection {
-    color: #fff;
-    background: #aae6b9;
-  }
 /* reset default browser css */
 
 a{
@@ -30,7 +26,7 @@ export const SaduStyle = createGlobalStyle`
   }
   ::selection {
     color: var(--color-additional-light);
-    background: var(--color-primary-700);
+    background: var(--color-primary-600);
   }
   
   ::-webkit-scrollbar {
