@@ -251,7 +251,7 @@ const DesktopMenuItem = styled(Text) <{ $active?: boolean }>`
     border-bottom: ${(props) => props.$active ? '1px solid var(--color-additional-dark)' : 'none'};
     &:hover {
       background-color: rgba(255,255,255,.2);
-      color: ${(props) => (props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-400)')};
+      color: ${(props) => (props.$active ? 'var(--color-additional-light) !important' : 'var(--color-primary-400)')};
     }
   }
 `;
