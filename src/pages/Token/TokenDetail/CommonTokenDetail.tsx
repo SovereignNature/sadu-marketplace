@@ -114,10 +114,13 @@ export const CommonTokenDetail: FC<IProps> = ({
         </Row>
         <Divider />
         {children}
+        <Row>
+          <p><b>{description}</b></p>
+        </Row>
         <Divider />
         <CollectionsCard
           avatarSrc={collectionCoverImage || ''}
-          description={description || ''}
+          description=''
           id={collectionId || -1}
           title={collectionName || ''}
         />
