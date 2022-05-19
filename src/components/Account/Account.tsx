@@ -10,7 +10,6 @@ import { toChainFormatAddress } from '../../api/chainApi/utils/addressUtils';
 import { shortcutText } from '../../utils/textUtils';
 import { NotificationSeverity } from '../../notification/NotificationContext';
 import { useNotification } from '../../hooks/useNotification';
-import { Avatar } from '../Avatar/Avatar';
 
 interface AccountProps {
   accountName: string
@@ -36,7 +35,6 @@ const AccountCard: FC<AccountProps> = ({ accountName, accountAddress, isShort = 
 
   return (
     <>
-      <Avatar size={24} src={DefaultAvatar} address={accountAddress} />
       <AccountInfoWrapper>
         <Text>{accountName}</Text>
         {!hideAddress && <AddressRow>
