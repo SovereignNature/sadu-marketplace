@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 
 import { TTransfer } from './types';
 import { TTokenPageModalBodyProps } from './TokenPageModal';
-import { AdditionalWarning100 } from '../../../styles/colors';
+import { Primary200 } from '../../../styles/colors';
 import { useTransferStages } from '../../../hooks/marketplaceStages';
 import DefaultMarketStages from './StagesModal';
 import { useAccounts } from '../../../hooks/useAccounts';
@@ -114,7 +114,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin-bottom: 16px;
   border-radius: 4px;
-  background-color: ${AdditionalWarning100};
+  background-color: ${Primary200};
   width: 100%;
 `;
 

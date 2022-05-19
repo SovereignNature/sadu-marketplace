@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { Market, MyTokens, Accounts, Trades, FAQ, TokenPage } from './pages';
-import { GlobalStyle } from './styles';
+import { GlobalStyle, SaduStyle } from './styles';
 
 ReactDOM.render(
   <React.StrictMode>
+    <SaduStyle />
     <GlobalStyle />
     <Router>
       <Routes>
@@ -15,7 +16,7 @@ ReactDOM.render(
           path={'/'}
         >
           <Route
-            element={<Navigate to='market' />}
+            element={<Navigate to='bio-compendium' />}
             index
           />
           <Route
@@ -24,7 +25,7 @@ ReactDOM.render(
           />
           <Route
             element={<Market />}
-            path={'market'}
+            path={'bio-compendium'}
           >
             <Route
               element={<Market />}
@@ -48,7 +49,7 @@ ReactDOM.render(
             path={'faq'}
           />
           <Route
-            element={<Navigate to='market' />}
+            element={<Navigate to='bio-compendium' />}
             path={'*'}
           />
         </Route>

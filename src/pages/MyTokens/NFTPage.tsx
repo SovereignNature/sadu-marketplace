@@ -287,3 +287,14 @@ const SearchAndSortingWrapper = styled.div`
 const TokensListWrapper = styled.div`
   min-height: 640px;
 `;
+
+const InputTextStyled = styled(InputText)`
+  width: 100%;
+  max-width: 610px;
+  
+  .input-wrapper {
+    input {
+      padding: 12px !important;
+    }
+  }
+`;

@@ -64,4 +64,19 @@ const BidsWrapper = styled.div`
   flex-direction: column;
   row-gap: calc(var(--gap) * 1.5);
   margin-bottom: calc(var(--gap) * 1.5);
+  .unique-table {
+    // background: red;
+    unique-table-data {
+      color: var(--color-secondary-100);
+      background: red;
+      unique-table-data-row {
+        color: inherit;
+        div {
+          color: inherit;
+          color: var(--color-secondary-100);
+
+        }
+      }
+    }
+  }
 `;

@@ -84,8 +84,8 @@ const ShortTimer = styled.div`
   font-size: 16px;
   line-height: 24px;
   font-weight:400px;
-  font-family: var(--font-inter);
-  color: #81858E;
+  font-family: var(--font-roboto);
+  color: var(--color-secondary-100);
   margin-bottom: 16px;
 `;
 
@@ -109,8 +109,8 @@ const Description = styled.div`
   font-size: 16px;
   line-height: 24px;
   font-weight:400px;
-  font-family: var(--font-inter);
-  color: #81858E;
+  font-family: var(--font-roboto);
+  color: var(--color-secondary-100);
 `;
 
 export default React.memo(Timer);

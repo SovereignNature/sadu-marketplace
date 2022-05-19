@@ -8,7 +8,7 @@ import { addressFromSeed } from '../../../utils/seedUtils';
 
 import DefaultAvatar from '../../../static/icons/default-avatar.svg';
 import { defaultPairType, derivePath } from './CreateAccount';
-import { AdditionalWarning100 } from '../../../styles/colors';
+import { Primary200, Primary700 } from '../../../styles/colors';
 import { Tooltip } from '../../../components/Tooltip/Tooltip';
 import Question from '../../../static/icons/question.svg';
 import { Avatar } from '../../../components/Avatar/Avatar';
@@ -131,6 +131,7 @@ const InputSeedWrapper = styled.div`
 
 const SeedInput = styled.textarea`
   margin-bottom: 32px;
+  color: var(--color-secondary-400);
   width: 100%;
   border: none;
   height: auto;
@@ -144,7 +145,7 @@ const TextStyled = styled(Text)`
   padding: 8px 16px;
   margin: calc(var(--gap) * 1.5) 0;
   border-radius: 4px;
-  background-color: ${AdditionalWarning100};
+  background-color: ${Primary200};
   width: 100%;
 `;
 

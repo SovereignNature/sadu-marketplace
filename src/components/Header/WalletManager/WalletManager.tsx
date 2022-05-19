@@ -43,10 +43,10 @@ export const WalletManager: FC = () => {
   }, [selectedAccount, chainData?.systemChain]);
 
   if (!isLoading && accounts.length === 0) {
-   return (
-     <Button title={'Connect or create account'} onClick={onCreateAccountClick} />
-    );
-  }
+ return (
+   <Button className='connect__btn' title={'Connect or create account'} onClick={onCreateAccountClick} />
+  );
+}
 
   if (deviceSize === DeviceSize.sm) {
     return (
@@ -154,7 +154,7 @@ const SettingsButtonWrapper = styled.div <{ $gearActive?: boolean }>`
   span {
     display: flex;
     align-items: center;
-    color: ${(props) => (props.$gearActive ? 'var(--color-primary-500)' : 'var(--color-grey-500)')};
+    color: ${(props) => (props.$gearActive ? 'var(--color-primary-200)' : 'var(--color-grey-500)')};
   }
 `;
 

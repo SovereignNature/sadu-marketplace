@@ -14,6 +14,17 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ activeItem }) => {
+  const className = 'inverted';
+  const scrollTrigger = 60;
+
+  window.onscroll = function() {
+    if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+      document.getElementsByTagName('header')[0].classList.add(className);
+    } else {
+      document.getElementsByTagName('header')[0].classList.remove(className);
+    }
+  };
+
   const { lessThanThreshold: showMobileMenu } =
     useScreenWidthFromThreshold(1279);
   const [mobileMenuIsOpen, toggleMobileMenu] = useState(false);
@@ -30,19 +41,19 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           onClick={mobileMenuToggler}
           src={menu}
         />}
-        <LogoLink to={'/'}>
-          <LogoIcon src={'/logos/logo.svg'} />
-        </LogoLink>
+        <Link to={'/'}>
+          <LogoIcon src={'/logos/sni-logo.svg'} />
+        </Link>
         {!showMobileMenu && (
           <nav>
             <Link to='/'>
               <DesktopMenuItem
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Bio-Compendium'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
               >
-                Market
+                Bio-Compendium
               </DesktopMenuItem>
             </Link>
             <Link to='myTokens'>
@@ -52,7 +63,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My tokens
+                My Tokens
               </DesktopMenuItem>
             </Link>
             <Link to='trades'>
@@ -86,12 +97,12 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           <LinkWrapper onClick={mobileMenuToggler}>
             <Link to='/'>
               <TextStyled
-                $active={activeItem === 'Market'}
+                $active={activeItem === 'Bio-Compendium'}
                 color='additional-dark'
                 size='m'
                 weight='medium'
               >
-                Market
+                Bio-Compendium
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -103,7 +114,7 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
                 size='m'
                 weight='medium'
               >
-                My tokens
+                My Tokens
               </TextStyled>
             </Link>
           </LinkWrapper>
@@ -159,12 +170,32 @@ const HeaderStyled = styled.div`
 const LeftSideColumn = styled.div`
   display: flex;
   align-items: center;
+  & > a {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      &:after {
+        content: "beta";
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 0px 5px;
+        position: relative;
+        bottom: 0px;
+        font-size: 12px;
+        bottom: -30px;
+        left: 6px;
+      }
+    }
+  }
+  
 `;
 
 const MenuIcon = styled.img`
   width: 32px;
   height: 32px;
-  margin-right: 8px;
+  margin-right: 24px;
 `;
 
 const LogoLink = styled(Link)`
@@ -174,7 +205,12 @@ const LogoLink = styled(Link)`
 `;
 
 const LogoIcon = styled.img`
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-right: 32px;
+  width: auto;
+  max-width: 130px;
+  height: 90px;  
 `;
 
 const RightSide = styled.div`
@@ -195,7 +231,7 @@ const MobileMenu = styled.div`
   left: 0;
   right: 0;
   height: 100vh;
-  background-color: var(--color-additional-light);
+  background-color: rgb(0 0 0 / 80%);
   box-shadow: inset 0 2px 8px rgb(0 0 0 / 6%);
   display: flex;
   flex-direction: column;
@@ -218,11 +254,21 @@ const TextStyled = styled(Text) <{ $active?: boolean }>`
 
 const DesktopMenuItem = styled(Text) <{ $active?: boolean }>`
   && {
+    font-size: 18px;
+    padding: 12px;
+    
     margin-right: 24px;
-    color: ${(props) => props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-500)'};
+    letter-spacing: 1px;
+    margin: 0 12px;
+    border-radius: 8px !important;
+    text-transform: capitalize;
+    transition: .4s;
+    background-color: ${(props) => props.$active ? 'var(--color-primary-200)' : 'none'};
+    color: ${(props) => props.$active ? 'var(--color-additional-dark) !important' : 'var(--color-primary-200) !important'};
     border-bottom: ${(props) => props.$active ? '1px solid var(--color-additional-dark)' : 'none'};
     &:hover {
-      color: ${(props) => (props.$active ? 'var(--color-additional-dark)' : 'var(--color-primary-400)')};
+      background-color: rgba(255,255,255,.2);
+      color: ${(props) => (props.$active ? 'var(--color-additional-light) !important' : 'var(--color-primary-400)')};
     }
   }
 `;
