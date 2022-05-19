@@ -4,8 +4,7 @@ import styled from 'styled-components/macro';
 import PricesFilter from '../../../components/Filters/PricesFilter';
 import { FiltersProps, PriceRange } from '../../../components/Filters/types';
 import CollectionsFilter from '../../../components/Filters/CollectionsFilter';
-import { MyTokensStatuses } from './types';
-import { FilterChangeHandler } from '../../../components/Filters/MobileFilter';
+import { MyTokensFilterState, MyTokensStatuses } from './types';
 
 export const Filters: FC<FiltersProps<MyTokensFilterState>> = ({ value, onFilterChange }) => {
   const onStatusFilterChange = useCallback((statuses: MyTokensStatuses) => {
@@ -26,7 +25,7 @@ export const Filters: FC<FiltersProps<MyTokensFilterState>> = ({ value, onFilter
 
   return <FiltersStyled>
     <CollectionsFilter onChange={onCollectionsFilterChange} />
-    <PricesFilter onChange={onPricesFilterChange} />
+    <PricesFilter onChange={onPricesFilterChange} value={undefined} />
   </FiltersStyled>;
 };
 

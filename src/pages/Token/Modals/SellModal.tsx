@@ -8,12 +8,12 @@ import { TTokenPageModalBodyProps } from './TokenPageModal';
 import { TAuctionProps, TFixPriceProps } from './types';
 import { useAuctionSellStages, useSellFixStages } from '../../../hooks/marketplaceStages';
 import { Primary200 } from '../../../styles/colors';
-import { TTokenPageModalBodyProps } from './TokenPageModal';
 import { useAccounts } from '../../../hooks/useAccounts';
 import { NumberInput } from '../../../components/NumberInput/NumberInput';
-import { AdditionalWarning100 } from '../../../styles/colors';
 import { StageStatus } from '../../../types/StagesTypes';
 import { NotificationSeverity } from '../../../notification/NotificationContext';
+import { useNotification } from '../../../hooks/useNotification';
+import { useFee } from '../../../hooks/useFee';
 
 const tokenSymbol = 'KSM';
 
@@ -256,6 +256,7 @@ export const SellFixStagesModal: FC<TSellFixStagesModal> = ({ collectionId, toke
 
 export const SellAuctionStagesModal: FC<TSellAuctionStagesModal> = ({ collectionId, tokenId, tokenPrefix, auction, onFinish }) => {
   const { stages, status, initiate } = useAuctionSellStages(collectionId, tokenId);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { push } = useNotification();
 
   useEffect(() => { initiate(auction); }, [auction]); //

@@ -28,7 +28,7 @@ export const Filters: FC<FiltersProps> = ({ value, onFilterChange }) => {
 
   return <FiltersStyled>
     <CollectionsFilter onChange={onCollectionsFilterChange} onTraitsChange={onCollectionTraitsFilterChange} />
-    <PricesFilter onChange={onPricesFilterChange} />
+    <PricesFilter onChange={onPricesFilterChange} value={undefined} />
   </FiltersStyled>;
 };
 

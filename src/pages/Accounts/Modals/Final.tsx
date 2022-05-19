@@ -8,6 +8,7 @@ import { Primary700, Grey300, Primary200 } from '../../../styles/colors';
 import { Tooltip } from '../../../components/Tooltip/Tooltip';
 import Question from '../../../static/icons/question.svg';
 import { Avatar } from '../../../components/Avatar/Avatar';
+import { TCreateAccountBodyModalProps } from './types';
 
 export const FinalModal: FC<TCreateAccountBodyModalProps> = ({ accountProperties, onFinish, onGoBack }) => {
   const onSaveClick = useCallback(() => {
@@ -15,7 +16,7 @@ export const FinalModal: FC<TCreateAccountBodyModalProps> = ({ accountProperties
     onFinish(accountProperties);
   }, [accountProperties]);
 
-  const shortSeed = useMemo(() => accountProperties?.seed.split(' ').map((value, index) => (index % 3) ? '…' : value).join(' '), [accountProperties]);
+  const shortSeed = useMemo(() => accountProperties?.seed.split(' ').map((value: any, index: number) => (index % 3) ? '…' : value).join(' '), [accountProperties]);
 
   return (<>
     <AddressWrapper>

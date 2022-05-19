@@ -23,6 +23,9 @@ import { useApi } from '../../hooks/useApi';
 import AccountCard from '../../components/Account/Account';
 import useDeviceSize, { DeviceSize } from '../../hooks/useDeviceSize';
 import { Primary200 } from '../../styles/colors';
+import { TextInput } from '../../components/TextInput/TextInput';
+import { TWithdrawBid } from '../../api/restApi/auction/types';
+import config from '../../config';
 
 const tokenSymbol = 'KSM';
 

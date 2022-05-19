@@ -121,21 +121,25 @@ export const CommonTokenDetail: FC<IProps> = ({
               <Text color='grey-500' size='m'>
                 Owned&nbsp;by
               </Text>
-            </Account>
-          </>}
-        </Row>
-        <Divider />
-        {children}
-        <Row>
-          <p><b>{description}</b></p>
-        </Row>
-        <Divider />
-        <CollectionsCard
-          avatarSrc={collectionCoverImage || ''}
-          description=''
-          id={collectionId || -1}
-          title={collectionName || ''}
-        />
+              <Account href={`${config.scanUrl}account/${owner || '404'}`}>
+                <Avatar size={24} src={DefaultAvatar} address={owner}/>
+                <Text color='primary-600' size='m'>
+                  {deviceSize === DeviceSize.lg ? owner || '' : shortcutText(owner || '') }
+                </Text>
+              </Account>
+            </>}
+          </Row>
+          <Divider />
+          {children}
+          {attributes && <AttributesBlock attributes={attributes} />}
+          <Divider />
+          <CollectionsCard
+            avatarSrc={collectionCover || ''}
+            description={description || ''}
+            id={collectionId || -1}
+            title={collectionName || ''}
+          />
+        </>}
       </Description>
     </CommonTokenDetailStyled>
   );
@@ -144,10 +148,6 @@ export const CommonTokenDetail: FC<IProps> = ({
 const CommonTokenDetailStyled = styled.div`
   display: flex;
   width: 100%;
-  .unique-font-heading {
-    color: #fff;
-
-  }
 
   @media (max-width: 568px) {
     flex-direction: column;

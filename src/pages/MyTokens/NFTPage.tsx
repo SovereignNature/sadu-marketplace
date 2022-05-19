@@ -1,7 +1,7 @@
 import React, { KeyboardEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components/macro';
 import BN from 'bn.js';
-import { Select, Text } from '@unique-nft/ui-kit';
+import { InputText, Select, Text } from '@unique-nft/ui-kit';
 import { BN_MAX_INTEGER } from '@polkadot/util';
 
 import { TokensList } from '../../components';
