@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Heading, Icon } from '@unique-nft/ui-kit';
+import { Heading, Icon, Text } from '@unique-nft/ui-kit';
 import BN from 'bn.js';
 import styled from 'styled-components/macro';
 
@@ -19,6 +19,7 @@ export const Price: FC<PriceProps> = ({ price }) => {
       <Row>
         <Heading size={'1'}>{`${formatKusamaBalance(new BN(price).toString(), api?.market?.kusamaDecimals)}`}</Heading>
         <Icon file={Kusama} size={32}/>
+        <Heading size={'1'}>KSM</Heading>
       </Row>
     </PriceWrapper>
   );

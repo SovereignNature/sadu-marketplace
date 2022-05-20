@@ -94,6 +94,7 @@ export const TokensCard: FC<TTokensCard> = ({ collectionId, tokenId, ...props })
         {price && <PriceWrapper>
           <Text size='s'>{topBid ? `${formatKusamaBalance(Number(topBid))}` : `${formatKusamaBalance(price)}` }</Text>
           <Icon file={Kusama} size={16} />
+          <Text size='s'>{'KSM'}</Text>
         </PriceWrapper>}
         {price && !auction && <Text size={'xs'} color={'grey-500'} >Price</Text>}
         {auction && <AuctionInfoWrapper>

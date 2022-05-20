@@ -31,6 +31,7 @@ export const PriceForAuction: FC<PriceProps> = ({ price, minStep, topBid }) => {
           : `${formatKusamaBalance(startPrice.toString(), api?.market?.kusamaDecimals)}`
         }</Heading>
         <Icon file={Kusama} size={32} />
+        <Text size='s'>{'KSM'}</Text>
       </Row>
       {topBid && <Row>
         <Text color='grey-500' size='m'>
