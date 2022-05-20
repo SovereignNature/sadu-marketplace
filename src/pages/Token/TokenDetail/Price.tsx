@@ -33,7 +33,8 @@ const Row = styled.div`
   display: flex;
   align-items: center;
   column-gap: calc(var(--gap) / 2);
-  && h1 {
-    margin-bottom: 0;
+  && .unique-font-heading.size-1 {
+    margin: 0 !important;
+    margin-top: 0 !important;
   }
 `;
